@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "parkdef.h": "c",
+        "string.h": "c",
+        "time.h": "c",
+        "default_libraries.h": "c"
+    }
+}
