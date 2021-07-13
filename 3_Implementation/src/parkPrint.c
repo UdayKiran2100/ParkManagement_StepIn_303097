@@ -22,10 +22,9 @@ int print_parkdetails_toFile(parkList *head)
 
 int print_parkdetails(parkList *head)
 {
-    printf("C\n");
+    
     if(head==NULL)
     {
-        printf("x\n");
         return 0;
     }
         

@@ -35,7 +35,7 @@ Software testing is a critical element of software quality assurance and represe
 All the functions are tested against various test cases for Unit Testing.
 
 # SWOT ANALYSIS
-![SWOT](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/tree/main/1_Requirements/SWOT.png?raw=true)
+![SWOT](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/blob/main/1_Requirements/SWOT.png?raw=true)
  
 # 4 W's and 1 H
 ## Who:

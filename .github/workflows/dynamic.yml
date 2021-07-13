@@ -1,9 +1,9 @@
 name: CodeQuality Dynamic Code Analysis Valgrind
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: apt install dependency
-      run: |
-        sudo apt-get -y install valgrind
-        sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
-    - name: make test
-      run: make -C 3_Implementation/ run
-    - name: Valgrid
-      run: valgrind ./3_Implementation/build/Park_Management.out
+      - uses: actions/checkout@v2
+      - name: apt install dependency
+        run: |
+          sudo apt-get -y install valgrind
+          sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
+      - name: make test
+        run: make -C 3_Implementation/ run
+      - name: Valgrid
+        run: valgrind ./3_Implementation/build/Park_Management.out

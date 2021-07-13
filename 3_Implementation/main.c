@@ -40,7 +40,7 @@ void main()
             tok=strtok(NULL,"\n");
             temp_time=atof(tok);
 
-            addIndividual(phead,temp_name,temp_token,temp_time);
+            phead= addIndividual(phead,temp_name,temp_token,temp_time);
             t[temp_token-1]=-1;
 
             fgets(temp,40,fptr);

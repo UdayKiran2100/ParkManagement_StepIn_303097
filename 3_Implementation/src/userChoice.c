@@ -27,7 +27,7 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
     FILE *fptr;
     //while(f==1)
     //{
-        char choice;
+        char choice='0';
         printf("Enter \t'A' for new entry.\n\t'B' for exiting person.\n\t'C' for printing park details\n\t'D' for application exit and clear park.\n\t'E' for logout\n");
         //scanf("%c",&choice);
         while(1)
@@ -38,8 +38,11 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
                 continue;
             }
             else{
-                choice=fgetc(stdin);
-                fflush(stdin);
+                char temp[3];
+                fgets(temp,3,stdin);//fgetc(stdin);
+                char *tk=strtok(temp,"\n");
+                choice=tk[0];
+                //fflush(stdin);
                 break;
             }
         }
@@ -61,23 +64,22 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
                         continue;
                     }
                     else{
-                        fgets(name,30,stdin);
-                        fflush(stdin);
+                        fgets(name,20,stdin);
+                        //fflush(stdin);
                         break;
                     }
                 }
 
-                //scanf("%[^\n]",name);
-                //usleep(1000);
+                
                 char *tok=strtok(name,"\n");
                 strcpy(name,tok);
-                fflush(stdin);
+                //fflush(stdin);
                 token1=pop_token(stack);
                 clock_t time=clock();
                 int time1=(int)time;
                 if(token1>0)
                     phead=addIndividual(phead,name,token1,time1);
-                    printf(" %s, %d ",phead->name,phead->token_number);
+                    
                 break;
             
             case 'B':
