@@ -1,9 +1,6 @@
 # ParkManagement_StepIn_303097
 A project for population management in parks and timely exit.
 
-
-https://www.code-inspector.com/project/24998/score/svg
-
 [![C/C++ CI](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/actions/workflows/c-build.yml/badge.svg)](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/actions/workflows/c-build.yml)
 
 [![Contribution Check - Git Inspector](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/actions/workflows/git-inspect.yml/badge.svg)](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/actions/workflows/git-inspect.yml)
