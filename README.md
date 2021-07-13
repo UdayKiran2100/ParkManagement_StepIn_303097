@@ -9,3 +9,5 @@ A project for population management in parks and timely exit.
 
 [![CodeQuality Dynamic Code Analysis Valgrind](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/actions/workflows/dynamic.yml/badge.svg)](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/actions/workflows/dynamic.yml)
 
+[![Unit Testing - Unity](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/actions/workflows/uni-test.yml/badge.svg)](https://github.com/UdayKiran2100/ParkManagement_StepIn_303097/actions/workflows/uni-test.yml)
+
