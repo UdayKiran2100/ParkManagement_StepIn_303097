@@ -107,9 +107,7 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
                 free(phead);
                 *f=0;
                 break;
-            
-            case '0':
-                return NULL;
+        
 
             default:
                 printf("\nInvalid Choice,Error\n");

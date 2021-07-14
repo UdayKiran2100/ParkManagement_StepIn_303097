@@ -66,12 +66,24 @@ int main()
         fclose(fptr);
         
     
-    while(f==1)
+    int c;
+    printf("Enter 1 to start the application\n Enter 0 to exit\n");
+
+    scanf("%d",&c);
+    fflush(stdin);
+
+    switch(c)
     {
+        case 1:
+            while(f==1)
+            {
+                phead= chooseInput(phead,&stack,&f);
+            }
+            break;
         
-       phead= chooseInput(phead,&stack,&f);
-       if(phead==NULL)
-        return 0;
-    } 
+        case 0:
+            return 0; 
+
+    }
     
 }
