@@ -70,6 +70,8 @@ void main()
     {
         
        phead= chooseInput(phead,&stack,&f);
+       if(phead==NULL)
+        return 0;
     } 
     
 }

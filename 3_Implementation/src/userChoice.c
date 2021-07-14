@@ -111,7 +111,8 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
                 break;
 
             default:
-                printf("\nInvalid Choice\n");
+                printf("\nInvalid Choice,Error\n");
+                return NULL;
         }
     //}
     return phead;
