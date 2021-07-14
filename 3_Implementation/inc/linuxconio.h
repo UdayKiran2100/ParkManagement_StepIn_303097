@@ -2,15 +2,17 @@
 
     #define _linux_lib_
 
-    #ifdef linux
-        #include <sys/ioctl.h>
-        #include <termios.h>
+
+    #ifdef _WIN32
+        #include<conio.h>
     #endif
 
-    #include <stdio.h>
-    #include<stdlib.h>
-
     #ifdef linux
+        
+        #include <sys/ioctl.h>
+        #include <termios.h>
+
+
         int kbhit()
         {
             struct termios term;
