@@ -3,7 +3,7 @@
 
 
 
-void main()
+int main()
 {
     parkList *phead=NULL;
 
@@ -70,8 +70,8 @@ void main()
     {
         
        phead= chooseInput(phead,&stack,&f);
-       if(phead==NULL)
-        return 0;
+       //if(phead==NULL)
+       // return 0;
     } 
     
 }

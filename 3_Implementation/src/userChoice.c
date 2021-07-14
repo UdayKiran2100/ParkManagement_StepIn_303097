@@ -39,11 +39,8 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
                 continue;
             }
             else{
-                char temp[3];
-                fgets(temp,3,stdin);//fgetc(stdin);
-                char *tk=strtok(temp,"\n");
-                choice=tk[0];
-                //fflush(stdin);
+                choice=fgetc(stdin);
+                fflush(stdin);
                 break;
             }
         }
@@ -112,7 +109,7 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
 
             default:
                 printf("\nInvalid Choice,Error\n");
-                return NULL;
+                //return NULL;
         }
     //}
     return phead;
