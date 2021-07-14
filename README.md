@@ -22,4 +22,4 @@ Folder             | Description
 
 PS No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
 -------|---------|----------------|----------------|---------------|-------------|--------------
-`303097` | Balla Uday Kiran  | All Features    | No     | No   | 7    | 7     
+`303097` | Balla Uday Kiran  | All Features    | 2     | 2   | 7    | 7     
