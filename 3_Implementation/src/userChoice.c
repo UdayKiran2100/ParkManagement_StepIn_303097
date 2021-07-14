@@ -104,7 +104,7 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
                 fflush(stdin);
                 push_token(stack,token2);
                 phead=deleteIndividual(phead,token2);
-            }   
+            }  
                 break;
 
             case 'C':
