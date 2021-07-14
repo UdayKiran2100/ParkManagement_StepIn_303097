@@ -28,6 +28,7 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
     FILE *fptr;
     //while(f==1)
     //{
+        
         char choice='0';
         printf("Enter \t'A' for new entry.\n\t'B' for exiting person.\n\t'C' for printing park details\n\t'D' for application exit and clear park.\n\t'E' for logout\n");
         //scanf("%c",&choice);
@@ -45,7 +46,7 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
             }
         }
             
-        
+       // printf("%d",choice);
         //usleep(1000);
         switch(choice)
         {
@@ -63,7 +64,7 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
                     }
                     else{
                         fgets(name,20,stdin);
-                        //fflush(stdin);
+                        fflush(stdin);
                         break;
                     }
                 }
@@ -106,6 +107,9 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
                 free(phead);
                 *f=0;
                 break;
+            
+            case '0':
+                return NULL;
 
             default:
                 printf("\nInvalid Choice,Error\n");
