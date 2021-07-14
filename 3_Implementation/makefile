@@ -17,32 +17,56 @@ endif
 
 
 SRC = \
-main.c \
 src/parkAdd.c \
 src/parkDelete.c \
 src/parkPrint.c \
 src/tokenHandler.c \
 src/userChoice.c \
 
-TEST_SRC = test_factorial.c\
-unity/unity.c
+TEST_SRC = \
+test/unity.c\
+test/test_main.c\
+
 
 
 
 INC = \
-inc\
+-Iinc\
+-Itest\
 
 TEST_INC = \
-unity\
+test\
 
 all: $(SRC) $(BUILD_DIR)
-	gcc $(SRC) -I$(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+	gcc $(SRC) main.c $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
 run: all
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
+# test_build: $(TEST_SRC) $(TEST_BUILD_DIR)
+# gcc $(SRC) -I$(INC) $(TEST_INC) -o $(call FixPath,$(TEST_BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+
+test_build: $(SRC) $(TEST_SRC) $(BUILD_DIR)
+	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+
+
+
+test: test_build
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+
+#Coverage
+coverageCheck:$(BUILD)
+	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	./$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+
+# test: test_build
+#    $(call FixPath,$(TEST_BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
+
+# $(TEST_BUILD_DIR):
+# 	mkdir $(TEST_BUILD_DIR)
 
 clean:
 	$(RM) $(call FixPath,$(BUILD_DIR)/*)

@@ -1,9 +1,2 @@
-Uday:1:4550 
-Kiran:2:17767 
-Paras:3:29850 
-Ritesh:4:45430 
-Arpita:5:70519 
-Uday:6:6435 
-Kiran:7:23917 
-Crepe:9:17502 
 karish:10:10285 
+kkr:8:7134 
