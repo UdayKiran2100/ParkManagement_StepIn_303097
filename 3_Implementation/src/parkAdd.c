@@ -4,7 +4,8 @@
 
 parkList* addIndividual( parkList *head, char *name, int token , int time )
 {
-    parkList *new=(parkList*)malloc(sizeof(parkList));
+    parkList* new;
+    new =(parkList*)malloc(sizeof(parkList));
     strcpy(new->name,name);
     new->token_number=token;
     new->in_time=time;
