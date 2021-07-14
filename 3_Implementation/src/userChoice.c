@@ -2,6 +2,12 @@
 #include "parkdef.h"
 #include "linuxconio.h"
 
+/**
+ * @brief multithread - This function is used to run as a background function.
+ * This performs the function of constantly checking the time limit of individual person inside the park and limit the  population.
+ * @param phead It is a pointer that holds the address of the linked list under consideration
+ * @return parkList* It returns the previously passed hesd pointer and with any changes as updated.
+ */
 parkList* multithread(parkList *phead)
 {
     
@@ -22,7 +28,15 @@ parkList* multithread(parkList *phead)
         //usleep(60);
 }
 
-
+/**
+ * @brief Take the admin input by providing the input prompts
+ * It asks for user choices and after it has been entered it moves to the required case accordingly. 
+ * Then further inputs or operations are performed as required.
+ * @param phead It is a pointer that holds the address of the linked list under consideration.
+ * @param stack It is the pointer that holds the stack  address for generating the tokens as required. 
+ * @param f It represents a flag value that if modified controls the flow of execution.
+ * @return parkList* It returns the previously passed hesd pointer and with any changes as updated.
+ */
 parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
 {
     FILE *fptr;
@@ -51,6 +65,7 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
         switch(choice)
         {
             case 'A':
+            {
                 printf("\nEnter name\n");
                 
                 char name[20];
@@ -78,40 +93,49 @@ parkList* chooseInput(parkList *phead, tokenStack *stack, int *f)
                 int time1=(int)time;
                 if(token1>0)
                     phead=addIndividual(phead,name,token1,time1);
-                    
+            }    
                 break;
             
             case 'B':
+            {
                 printf("\nEnter token number who wants to exit\n");
                 int token2;
                 scanf("%d",&token2);
                 fflush(stdin);
                 push_token(stack,token2);
                 phead=deleteIndividual(phead,token2);
-                
+            }   
                 break;
 
             case 'C':
+            {
                 print_parkdetails(phead);
+            }
                 break;
 
             case 'D':
+            {
                 fptr=fopen("park_details.txt","w");
                 fclose(fptr);
                 free(phead);
                 *f=0;
+            }
                 break;
 
             case 'E':
+            {
                 print_parkdetails_toFile(phead);
                 free(phead);
                 *f=0;
+            }
                 break;
         
 
             default:
+            {
                 printf("\nInvalid Choice,Error\n");
-                //return NULL;
+            }
+                break;
         }
     //}
     return phead;

@@ -2,7 +2,11 @@
 #include "parkdef.h"
 
 
-
+/**
+ * @brief This function acts as the starting point of our application and is responsible for calling other function as and when required. 
+ * This is  mandatory for our application to run.Without main the program won't execute.
+ * @return int This return value is required to mark the end of the program execution. 
+ */
 int main()
 {
     parkList *phead=NULL;
@@ -82,7 +86,7 @@ int main()
             break;
         
         case 0:
-            return 0; 
+            return 0;
 
     }
     

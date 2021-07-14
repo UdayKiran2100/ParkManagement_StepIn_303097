@@ -5,6 +5,14 @@
     #define MAXPARKSIZE 100
 
 
+    /**
+     * @brief parklist structure This structure contains 4 elments and is used throughout the program to describe a member entering a  park.
+     * 
+     * ->name - stores the name of the individual
+     * ->token_number- Unique token assigned to each individual
+     * ->in_time- The time of entry of an individual into a park
+     * ->next- Pointer to the next node of the linked list 
+     */
     typedef struct parklist{
         char name[20];
         int token_number;
@@ -16,6 +24,13 @@
         This structure can be used to create variables of the given type
     */
 
+   /**
+    * @brief tokenstack structure Used to store the token numbers which are avaailable for use.
+    * 
+    * ->tokennumber- the unique number
+    * -> top- the index of the top element in the stack
+    * 
+    */
     typedef struct tokenstack
     {
         int tokenno[MAXPARKSIZE];

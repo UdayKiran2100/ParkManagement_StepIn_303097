@@ -42,6 +42,10 @@ int main()
 
 /* Write all the test functions */ 
 
+/**
+ * @brief Used to test the working of the function addIndividual.
+ * 
+ */
 void test_parkadd(void)
 {
     char name[20]="Uday"; 
@@ -56,6 +60,11 @@ void test_parkadd(void)
     TEST_ASSERT_EQUAL(head, addIndividual(head,name,2,10005));   
 }
 
+
+/**
+ * @brief Used to check the working of the function delete from beginning
+ * 
+ */
 void test_parkdelete_beginning(void)
 {
   parkList *temp1 = (parkList*)malloc(sizeof(parkList));
@@ -66,6 +75,10 @@ void test_parkdelete_beginning(void)
 
 }
 
+/**
+ * @brief Used to check the working of the function delete from anywhere in list.
+ * 
+ */
 void test_parkdelete(void)
 {
   parkList *temp1 = NULL;
@@ -86,6 +99,11 @@ void test_parkdelete(void)
 
 }
 
+
+/**
+ * @brief Used to test the printing of the data to a file
+ * 
+ */
 void test_print_toFile(void)
 {
   parkList *temp1 = NULL;
@@ -101,7 +119,10 @@ void test_print_toFile(void)
   
 }
 
-
+/**
+ * @brief Used to test the printing of the data to the terminal
+ * 
+ */
 void test_print(void)
 {
   parkList *temp1 = NULL;
@@ -117,6 +138,10 @@ void test_print(void)
   
 }
 
+/**
+ * @brief Used to test the working of the push to stack operation on token values.
+ * 
+ */
 void test_pushtoken(void)
 {
   tokenStack stack;
@@ -133,6 +158,10 @@ void test_pushtoken(void)
 }
 
 
+/**
+ * @brief Used to test the working of the pop out of stack operations.
+ * 
+ */
 void test_poptoken(void)
 {
   tokenStack stack;
